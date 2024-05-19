@@ -32,6 +32,9 @@ import AVFoundation
 class VideoEditor {
   func makeBirthdayCard(fromVideoAt videoURL: URL, forName name: String, onComplete: @escaping (URL?) -> Void) {
     onComplete(videoURL)
+    
+    let asset = AVURLAsset(url: videoURL)
+    let composition = AVMutableComposition()
   }
   
   private func orientation(from transform: CGAffineTransform) -> (orientation: UIImage.Orientation, isPortrait: Bool) {
